@@ -5,22 +5,18 @@ class MathDojo(object):
 
 	def add(self, *args):
 		for i in range(0,len(args)):
-			if type(args[i]) is list:
+			if type(args[i]) is list or type(args[i]) is tuple:
 				self.x += sum(args[i])
 			elif type(args[i]) is int:
 				self.x += args[i]
-			elif type(args[i]) is tuple:
-				self.x += sum(args[i])
 		return self
 
 	def subtract(self, *args):
 		for i in range(0,len(args)):
-			if type(args[i]) is list:
+			if type(args[i]) is list or type(args[i]) is tuple:
 				self.x -= sum(args[i])
 			elif type(args[i]) is int:
 				self.x -= args[i]
-			elif type(args[i]) is tuple:
-				self.x -= sum(args[i])
 		return self
 
 	def result(self):
